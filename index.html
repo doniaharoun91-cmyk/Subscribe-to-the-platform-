@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DONIA | تعلم الألمانية من الصفر</title>
+<meta name="description" content="تعلم الألمانية بالعربي مع DONIA. باقة A1 وA2 وA2+ بسعر 350 جنيه.">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+--p:#6a2fc0;--pd:#3f1c78;--pl:#f3edfc;
+--pm:#d9c8f5;--w:#fff;--t:#26173f;
+--mu:#6d5f86;--ok:#1f8a5b;--gold:#e0a100;
+--wa:#128c4a
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+margin:0;font-family:Tajawal,Tahoma,sans-serif;
+background:var(--pl);color:var(--t);
+line-height:1.65;font-size:15px
+}
+a{color:var(--p)}
+header{background:var(--pd);color:#fff}
+.bar{
+max-width:900px;margin:auto;padding:8px 14px;
+display:flex;align-items:center;justify-content:space-between;
+position:relative
+}
+.logo{font-weight:800;font-size:1.35rem;letter-spacing:1px}
+.menuB{
+background:transparent;color:#fff;border:1px solid #8f67d1;
+font:inherit;font-size:1.1rem;padding:2px 10px;
+border-radius:8px;cursor:pointer
+}
+.menu{
+display:none;position:absolute;top:100%;inset-inline-end:12px;
+background:var(--pd);border-radius:12px;padding:8px;
+flex-direction:column;gap:5px;min-width:180px;z-index:10
+}
+.menu.on{display:flex}
+.menu a{
+color:#fff;text-decoration:none;border:1px solid #8f67d1;
+border-radius:8px;padding:6px 10px
+}
+main{max-width:900px;margin:auto;padding:0 12px 30px}
+section{margin-top:20px;scroll-margin-top:12px}
+.hero{
+background:linear-gradient(135deg,var(--p),var(--pd));
+color:#fff;border-radius:17px;padding:25px 15px;
+margin-top:14px;text-align:center
+}
+.badge{
+display:inline-block;background:rgba(255,255,255,.18);
+border-radius:999px;padding:3px 10px;font-size:.85rem;
+margin-bottom:7px
+}
+.hero h1{margin:0 0 7px;font-size:1.8rem;line-height:1.4}
+.hero p{margin:0 auto 12px;max-width:570px;font-size:1rem}
+.row{
+display:flex;gap:8px;justify-content:center;
+flex-wrap:wrap;margin-top:12px
+}
+.btn{
+display:inline-block;font:inherit;font-weight:700;
+border-radius:9px;padding:8px 14px;background:var(--p);
+color:#fff;text-decoration:none;border:0;cursor:pointer;
+font-size:.92rem
+}
+.btn.light{background:#fff;color:var(--pd)}
+.btn.wa{background:var(--wa)}
+.btn.ghost{background:transparent;border:1px solid var(--p);color:var(--p)}
+h2{color:var(--pd);font-size:1.35rem;margin:0 0 10px}
+.grid{
+display:grid;gap:9px;
+grid-template-columns:repeat(3,minmax(0,1fr))
+}
+.card{
+background:var(--w);border:1px solid var(--pm);
+border-radius:12px;padding:12px
+}
+.card h3{margin:0 0 4px;color:var(--p);font-size:1rem}
+.card p{margin:0;font-size:.88rem;line-height:1.6}
+.ico{font-size:1.3rem;margin-bottom:2px}
+.cols{display:grid;gap:10px;grid-template-columns:1fr 1fr}
+.price{
+background:var(--w);border:2px solid var(--p);
+border-radius:15px;padding:17px;text-align:center
+}
+.price .amt{
+font-size:2.25rem;font-weight:800;color:var(--p);line-height:1.25
+}
+.price small{color:var(--mu);font-size:.9rem}
+.price ul{
+list-style:none;padding:0;margin:10px 0 0;
+text-align:start;font-size:.9rem
+}
+.price li{margin:2px 0}
+.steps{
+counter-reset:s;list-style:none;padding:0;margin:0;
+display:grid;gap:8px
+}
+.steps li{
+counter-increment:s;background:var(--w);
+border:1px solid var(--pm);border-radius:10px;
+padding:10px 42px 10px 10px;position:relative;font-size:.92rem
+}
+.steps li::before{
+content:counter(s);position:absolute;inset-inline-end:9px;
+top:10px;width:25px;height:25px;border-radius:50%;
+background:var(--p);color:#fff;display:grid;
+place-items:center;font-weight:800
+}
+.steps b{color:var(--pd)}
+.note{
+background:#fff6e0;border-inline-start:4px solid var(--gold);
+padding:8px 11px;border-radius:8px;margin-top:9px;font-size:.9rem
+}
+.free{
+background:#eefaf4;border-inline-start:4px solid var(--ok);
+padding:9px 11px;border-radius:8px;margin-top:10px;font-size:.9rem
+}
+.contact{display:flex;gap:8px;flex-wrap:wrap}
+.contact a{flex:1 1 150px;text-align:center}
+.num{
+font-weight:800;direction:ltr;display:inline-block;
+letter-spacing:.5px;white-space:nowrap
+}
+footer{text-align:center;color:var(--mu);font-size:.85rem;padding:16px}
+@media(max-width:560px){
+main{padding-left:10px;padding-right:10px}
+.hero{padding:21px 12px}
+.hero h1{font-size:1.55rem}
+.hero p{font-size:.93rem}
+.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.card{padding:10px}
+.card h3{font-size:.95rem}
+.card p{font-size:.84rem}
+.cols{grid-template-columns:1fr}
+.price .amt{font-size:2rem}
+h2{font-size:1.25rem}
+}
+@media(max-width:350px){
+.grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="bar">
+<span class="logo">DONIA</span>
+<button class="menuB" id="menuB" aria-label="القائمة"
+aria-expanded="false" onclick="toggleMenu()">☰</button>
+<nav class="menu" id="menu">
+<a href="#inside" onclick="toggleMenu(false)">المحتوى</a>
+<a href="#price" onclick="toggleMenu(false)">الاشتراك</a>
+<a href="#how" onclick="toggleMenu(false)">طريقة الدفع</a>
+<a href="#contact" onclick="toggleMenu(false)">تواصل معنا</a>
+</nav>
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+<span class="badge">A1 + A2 + A2+</span>
+<h1>اتعلّم الألماني من الصفر 🇩🇪</h1>
+<p>
+3 مستويات في باقة واحدة، بشرح عربي مبسّط،
+وفيديوهات وتدريبات وملفات PDF تساعدك تتعلم خطوة بخطوة.
+</p>
+<div class="row">
+<a class="btn light" href="https://tinyurl.com/donia-german"
+target="_blank" rel="noopener">جرّب المنصة</a>
+<a class="btn wa" href="https://wa.me/201141654852"
+target="_blank" rel="noopener">تواصل واشترك</a>
+</div>
+</section>
+
+<section id="inside">
+<h2>إيه اللي جوه المنصة؟</h2>
+<div class="grid">
+
+<div class="card">
+<div class="ico">📘</div>
+<h3>3 مستويات</h3>
+<p>A1 وA2 وA2+ ضمن باقة واحدة.</p>
+</div>
+
+<div class="card">
+<div class="ico">🎬</div>
+<h3>فيديوهات</h3>
+<p>فيديوهات تعليمية لمتابعة الدروس.</p>
+</div>
+
+<div class="card">
+<div class="ico">📄</div>
+<h3>ملفات PDF</h3>
+<p>ملفات مساعدة للمذاكرة والمراجعة.</p>
+</div>
+
+<div class="card">
+<div class="ico">🔊</div>
+<h3>نطق صوتي</h3>
+<p>اسمع نطق الكلمات والجمل الألمانية.</p>
+</div>
+
+<div class="card">
+<div class="ico">✍️</div>
+<h3>تدريبات</h3>
+<p>أسئلة واختبارات لمراجعة فهمك.</p>
+</div>
+
+<div class="card">
+<div class="ico">📚</div>
+<h3>بنك كلمات</h3>
+<p>ابحث عن الكلمات وراجعها بسهولة.</p>
+</div>
+
+<div class="card">
+<div class="ico">🗂️</div>
+<h3>بطاقات مراجعة</h3>
+<p>تدرّب على الكلمات ومعانيها.</p>
+</div>
+
+<div class="card">
+<div class="ico">🌐</div>
+<h3>مترجم</h3>
+<p>ساعد نفسك في فهم الكلمات والمعاني.</p>
+</div>
+
+<div class="card">
+<div class="ico">🗓️</div>
+<h3>خطة مذاكرة</h3>
+<p>نظّم وقتك وتابع تقدّمك.</p>
+</div>
+
+</div>
+<div class="free">
+<b>جرّب قبل الاشتراك:</b> الدرسين الأولين متاحين مجانًا للمعاينة.
+</div>
+</section>
+
+<section id="price">
+<h2>باقة DONIA التعليمية</h2>
+<div class="cols">
+
+<div class="price">
+<div class="amt">350 جنيه</div>
+<small>للمستويات الثلاثة كاملة</small>
+<ul>
+<li>✓ المستوى A1</li>
+<li>✓ المستوى A2</li>
+<li>✓ المستوى A2+</li>
+<li>✓ فيديوهات وملفات PDF</li>
+<li>✓ تدريبات واختبارات</li>
+<li>✓ نطق صوتي ومترجم</li>
+<li>✓ بنك كلمات وبطاقات مراجعة</li>
+<li>✓ خطة مذاكرة تفاعلية</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>ابدأ رحلتك النهارده 💜</h3>
+<p>
+ادفع مرة واحدة 350 جنيه للحصول على
+باقة المستويات الثلاثة A1 وA2 وA2+.
+اتعلم بالتدريج وراجع معلوماتك وتدرّب
+على اللي اتعلمته.
+</p>
+<div class="note">
+يتم تفعيل الاشتراك بعد تأكيد الدفع.
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="how">
+<h2>طريقة الاشتراك والدفع</h2>
+<ol class="steps">
+
+<li>
+<b>سجّل حسابك:</b>
+<a href="https://tinyurl.com/donia-german"
+target="_blank" rel="noopener">افتح المنصة</a>
+وسجّل بإيميلك.
+</li>
+
+<li>
+<b>حوّل 350 جنيه بإحدى الطريقتين:</b><br>
+إنستاباي:
+<span class="num">01141654258</span><br>
+فودافون كاش:
+<span class="num">01150770678</span>
+</li>
+
+<li>
+<b>ابعت إيصال الدفع</b> مع الإيميل المسجّل
+على واتساب:
+<a href="https://wa.me/201141654852"
+target="_blank" rel="noopener" class="num">01141654852</a>
+</li>
+
+<li>
+<b>استلم كود التفعيل</b> بعد تأكيد التحويل،
+وأدخله في صفحة الاشتراك داخل المنصة.
+</li>
+
+</ol>
+
+<div class="note">
+350 جنيه تشمل المستويات الثلاثة A1 وA2 وA2+.
+</div>
+</section>
+
+<section id="contact">
+<h2>تواصل معنا</h2>
+<div class="contact">
+<a class="btn wa" href="https://wa.me/201141654852"
+target="_blank" rel="noopener">واتساب</a>
+<a class="btn" href="https://www.instagram.com/doniawebsite"
+target="_blank" rel="noopener">إنستجرام</a>
+<a class="btn" href="https://www.facebook.com/share/19mG6ovZxx/"
+target="_blank" rel="noopener">فيسبوك</a>
+<a class="btn ghost" href="https://tinyurl.com/donia-german"
+target="_blank" rel="noopener">رابط المنصة</a>
+</div>
+</section>
+
+</main>
+
+<footer>DONIA · تعلّم الألمانية من الصفر 🇩🇪</footer>
+
+<script>
+function toggleMenu(force){
+const m=document.getElementById('menu');
+const b=document.getElementById('menuB');
+const open=force===undefined?!m.classList.contains('on'):force;
+m.classList.toggle('on',open);
+b.setAttribute('aria-expanded',String(open));
+}
+document.addEventListener('click',e=>{
+if(!e.target.closest('header'))toggleMenu(false);
+});
+</script>
+
+</body>
+</html>
